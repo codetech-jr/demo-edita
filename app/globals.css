@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --primary: #176B87;
+  --primary-dark: #0f4f64;
+  --primary-light: #1a85a8;
+  --secondary: #2C3E50;
+  --accent: #D4AF37;
+  --bg: #FAFAFA;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--secondary);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+/* Overlay for modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Star rating */
+.stars {
+  color: var(--accent);
+}
+
+/* Section divider */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 0 auto 1rem;
+  border-radius: 2px;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(23, 107, 135, 0.08);
+  color: var(--primary);
+  border: 1px solid rgba(23, 107, 135, 0.2);
+  border-radius: 50px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
