@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -10,12 +11,13 @@ export default function Footer() {
                     {/* Brand column */}
                     <div className="sm:col-span-2 lg:col-span-1">
                         <div className="flex items-center gap-2 mb-4">
-                            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                                <span className="text-white font-serif font-bold text-sm">EG</span>
-                            </div>
-                            <span className="font-serif text-lg font-semibold text-slate-900">
-                                Edita González <span className="text-primary">Abogados</span>
-                            </span>
+                            <Image
+                                src="/logo-ega.svg"
+                                alt="Edita González Abogados"
+                                width={110}
+                                height={40}
+                                className="h-10 w-auto object-contain"
+                            />
                         </div>
                         <p className="text-sm text-slate-600 leading-relaxed mb-5 max-w-xs">
                             Abogados especializados en Derecho de Extranjería con base en Madrid, España. Cambiamos vidas, un caso a la vez.

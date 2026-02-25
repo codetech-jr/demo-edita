@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
@@ -34,13 +35,15 @@ export default function Header({ onBooking }) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16 lg:h-20">
                     {/* Logo */}
-                    <a href="#" className="flex items-center gap-2 shrink-0">
-                        <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                            <span className="text-white font-serif font-bold text-sm">EG</span>
-                        </div>
-                        <span className="font-serif text-secondary text-lg font-semibold hidden sm:block">
-                            Edita González <span className="text-primary">Abogados</span>
-                        </span>
+                    <a href="#" className="flex items-center gap-1 shrink-0">
+                        <Image
+                            src="/logo-ega.svg"
+                            alt="Edita González Abogados"
+                            width={120}
+                            height={44}
+                            className="h-11 w-auto object-contain"
+                            priority
+                        />
                     </a>
 
                     {/* Desktop Nav */}
